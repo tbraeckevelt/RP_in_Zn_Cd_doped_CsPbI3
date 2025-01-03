@@ -15,7 +15,7 @@ This repository consists of three folders:
             - `110_1shiftb/`: Scripts for RP phase with CsI layer along a 110 plane of the alpha phase. The perovskite layer are shifted along direction b of the plane. This 'b' direction is a 1-10 vector of the alpha phase. This is the one-shift RP phase structure for the Cd doped samples that are reported in the paper.
             - `110_2shifts/`: Scripts for RP phase with CsI layer along a 110 plane of the alpha phase. The perovskite layer are shifted along the two directions of the plane.
             ```
-        - `interface_creation_sciripts/`: Description of subfolder3.
+        - `interface_creation_sciripts/`: This folder contains the script Create_perovskite_RP_interface.py, which constructs interface structures between the perovskite and RP phase. You can define the interface plane, the CsI plane of the RP phase and the various thicknesses in each direction. The perovskite-RP interface can be interpreteded as two peroskite structures shifted with a Pb-I distance in all three directions, in between those two perovskite structures is an S-shaped CsI layer. To create a one-shift RP phase the shift between those two perovskite structures is only performed in two directions. However, in most cases this will lead to overlapping atoms of different elements.
 
 2. `MD_simulations_and_analysis/`
     - Contains files and scripts for molecular dynamics simulations and analysis.
