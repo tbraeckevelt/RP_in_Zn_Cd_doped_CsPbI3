@@ -36,9 +36,7 @@ This repository consists of three folders:
     - hortense.yaml specifies the settings for the executor defined by psiflow. These simulations ran on the flemisch supercomputer infrastructure Hortense.
     - submitscript.sh is the jobsubmission script needed to run the python script on the flemisch supercomputer infrastructure Hortense.
 
-    ```
-
-    ```
+<br><br>
 
     > **Note:** This repository contains additional structures and Python scripts for molecular dynamics simulations which are not reported in the paper. Additional structures include doped perovskite and an alternative one shift 110 RP phase (110_1shifta, 110_1shiftb is reported in the paper due to its better metastability).
 
