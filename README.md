@@ -1,5 +1,6 @@
 # RP_in_Zn_Cd_doped_CsPbI3
-A repository for the paper: Increasing the phase stability of CsPbI3 nanocrystals by Zn2+ and Cd2+ addition: synergistic study by transmission electron microscopy and molecular dynamics calculations
+A repository for the following paper:
+Increasing the phase stability of CsPbI3 nanocrystals by Zn2+ and Cd2+ addition: synergistic study by transmission electron microscopy and molecular dynamics calculations
 
 This repository consists of three folders:
 
