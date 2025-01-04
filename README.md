@@ -1,5 +1,5 @@
 # RP_in_Zn_Cd_doped_CsPbI3
-A repository for the paper about the creation of RP phases due to Zn and Cd doping in CsPbI3
+A repository for the paper: Increasing the phase stability of CsPbI3 nanocrystals by Zn2+ and Cd2+ addition: synergistic study by transmission electron microscopy and molecular dynamics calculations
 
 This repository consists of three folders:
 
@@ -20,13 +20,20 @@ This repository consists of three folders:
 
 2. `MD_simulations_and_analysis/`
     - Contains files and scripts for the molecular dynamics simulations and the post-analysis of the generated trajectories.
-    - the `data/` subfolder contain the initial structures for every MD simulation
-    - main.py is a python script that makes use of parsl to perform apps (which is a wrapper around a python function)...
+    - the `data/` subfolder contains the initial structures for every MD simulation subdivided in different subfolders depending on the type of structure.
+    - main.py is a python script that makes use of parsl to launch apps (an app is a wrapper around a python function) on a set of computational resources (specified via the executor, given as argument to the app). The scripts make use of psiflow which has defined a set of executors via an extra yaml file. See psiflow and parsl manual for more information. Most of the apps perform MD simulations using yaff or perform a post analysis on a set of trajectories.
+    - hortense.yaml specifies the settings for the executor defined by psiflow. These simulations ran on the flemisch supercomputer infrastructure Hortense. Note that the used container was not the standard psiflow container, but a slighltly addapted container which is available on my GitHub account.
+    - utils_debug.py defines a few functions that main.py will use the launch the apps.
+    - submitscript.sh is the jobsubmission script needed to run the python script on the flemisch supercomputer infrastructure Hortense.
 
 3. `Train_macemodel/`
     - Contains files and scripts related to training the MACE model.
-    - sfg
+    - the `data/` subfolder contains an xyz files with an initial set of training and validation structures to train an inital MLP and a file that specifies the CP2K input settings.
+    - run_sequential_learining.py is a python script that makes use of psiflow to perform all active learning simulations, namely the ab initio calculations with CP2K, the MLP training with MACE and the short MD simulations with openMM.
+    - hortense.yaml specifies the settings for the executor defined by psiflow. These simulations ran on the flemisch supercomputer infrastructure Hortense.
+    - submitscript.sh is the jobsubmission script needed to run the python script on the flemisch supercomputer infrastructure Hortense.
 
+        
 
     > **Note:** This repository contains additional structures and Python scripts for molecular dynamics simulations which are not reported in the paper. Additional structures include doped perovskite and an alternative one shift 110 RP phase (110_1shifta, 110_1shiftb is reported in the paper due to its better metastability).
 
